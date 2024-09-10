@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "open sans";
+    src: url("OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "pinyon-script";
+    src: url("fonts/pinyonscript-regular.ttf");
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(fonts/roboto/Roboto-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
+
+header *{
+    z-index: 5;
+    color: #FFFFFF;
+}
+
+nav{
+    width: 100%;
+    height: 4rem;
+    background: #03045E;
+}
+
+nav > ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sous_menu_box{
+    width: 11rem;
+    padding: .5rem;
+    background: #ffffff;
+    box-shadow: 0 0 7px rgba(68, 45, 45, 0.3);
+    border-top: 3px solid #007aa2;
+    display: none;
+}
+
+.sous_menu_box.menu_visible{
+    display: block;
+}
+
+.menu{
+    width: 11rem;
+    height: 4rem;
+    padding: 1.5rem 0;
+    display: flex;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.menu:hover , .menu:active , .sous_menu:hover , .sous_menu:active{
+    animation: color_menu .5s ease-in forwards;
+}
+
+/*@keyframes color_menu {
+    0%{
+        color: #FFFFFF;
+    }
+    100%{
+        color: #007aa2;
+    }
+}*/
+
+.btn_top, .logo_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+}
+
+.logo_box{
+    left: 3rem;
+}
+
+.btn_top{
+    right: 3rem;
+}
+
+.logo_box img{
+    width: 6rem;
+}
+
+.sous_menu{
+    padding: .5rem;
+    color: #03045E;
+    transition: .5s ease-in-out;
+}
+
+.logo{
+    width: 3rem;
+    padding-top: .3rem;
+}
+
+li{
+    font-family: "open sans",helvetica;
+    list-style: none;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.menu_box > li{
+    height: 4rem;
+}
+
+.btn{
+    width: 10rem;
+    height: 3rem;
+    background-color: #ff3c00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn p{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #ffffff;
+    font: sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_list{
+    width: 100%;
+    position: absolute;
+    background: #FFFFFF;
+    bottom: -10rem;
+    box-shadow: 0 0 7px rgba(68, 45, 45, 0.3);
+    display: none;
+}
+
+.btn_list.active{
+    display: block;
+}
+
+.btn-items{
+    padding: .5rem;
+}
+
+.btn-items a{
+    color: #03045E;
+    text-decoration: none;
+}

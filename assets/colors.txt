@@ -1,0 +1,6 @@
+dark : #03045E
+2nd : #0077B6
+3rd : #00B4D8
+4th : #90E0EF
+light : #CAF0F8
+cta : #FF3C00

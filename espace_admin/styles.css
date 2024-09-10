@@ -1,0 +1,1016 @@
+@import url(../assets/css/variables.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*================================ HEADER ================================*/
+
+header{
+    width: 85%;
+    height: 3rem;
+    padding-left: 2rem;
+    background: #FFFFFF;
+    position: fixed;
+    right: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: .5rem;
+    padding-right: 2rem;
+    color: var(--3rd);
+    box-shadow: 15px 0px 5px rgba(206, 206, 206, 0.8);
+}
+
+header h3:nth-child(1){
+    color: var(--cta);
+    margin-right: auto;
+}
+
+header i{
+    font-size: large;
+    margin: 0 1rem;
+}
+
+header i::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--cta);
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(-5px);
+}
+
+header a{
+    text-decoration: none;
+    color: var(--3rd);
+    display: flex;
+    align-items: center;
+}
+
+header img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--3rd);
+}
+
+/*================================ MAIN ================================*/
+
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* min-height: 100vh; */
+    /* background: red; */
+}
+
+main aside{
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    box-shadow: 5px -5px 5px rgba(206, 206, 206, 0.8);
+}
+
+main section{
+    margin-left: 15%;
+    margin-top: 3rem;
+    width: 85%;
+    min-height: 100vh;
+    padding: 2rem;
+    background: rgb(246, 246, 246);
+    z-index: 3;
+}
+
+/*------------------------------------------- FOR ASIDE ----------------------------------------------*/
+
+/* .group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.group:nth-child(1) {
+    width: 100%;
+    height: 3rem;
+    border-bottom: 2px solid var(--light);
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.group .logo{
+    width: 2rem;
+    height: 2rem;
+    background: var(--3rd);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.group h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    font-size: smaller;
+}
+
+.item{
+    width: 100%;
+    height: 2.5rem;
+    padding: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.item p{
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.item i{
+    margin: 0 .5rem;
+}
+
+.item.active p{
+    background: var(--3rd);
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+/* .group:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+} */
+
+.group img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 2px solid #08C5BB;
+    margin-bottom: .5rem;
+}
+
+.group p:nth-of-type(1){
+    font-weight: bold;
+}
+
+.group p:nth-of-type(2){
+    color: #08C5BB;
+}
+
+/*------------------------------------------- FOR OVERVIEW ----------------------------------------------*/
+
+.overview{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.greeting{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    background: #0cece1;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.greeting div:nth-child(1){
+    width: 60%;
+}
+
+.greeting div:nth-child(2){
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.greeting img{
+    height: 10rem;
+    position: absolute;
+    top: -2rem;
+}
+
+.greeting h2{
+    margin-bottom: 1rem;
+}
+
+.greeting button{
+    width: 8rem;
+    height: 2rem;
+    margin: 1rem 0;
+    background: transparent;
+    border: 1px solid #012FFF;
+}
+
+.greeting a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #012FFF;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.infos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.info {
+    width: calc((100%) / 4 - .75rem);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.info > * {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.info *::first-letter{
+    text-transform: capitalize;
+}
+
+.info i{
+    width: 3rem;
+    background: #012FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 2rem;
+    border-radius: 10px;
+    /* align-self: center; */
+}
+
+.info  div{
+    width: 60%;
+    /* background: blue; */
+}
+
+.info p{
+    font-size: small;
+}
+
+.info span{
+    font-size: larger;
+}
+
+.attente i{
+    background: #ff7c01;
+    color: white;
+}
+
+/* .info:nth-last-child(1){
+    height: 15rem;
+} */
+
+/*------------------------------------------- DEPARTEMENTS ----------------------------------------------*/
+
+.departements, .filiere{
+    flex-direction: column;
+    gap: 2rem;
+    /* background: red; */
+}
+
+.departements h4 span, .filiere h4 span, .etudiants h4 span{
+    min-width: 2.5rem;
+    height: 2rem;
+    padding: 0.25rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #012FFF;
+    color: #FFFFFF;
+    margin-right: 5px;
+    border-radius: 15px;
+}
+
+.liste_depart{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* background: rgb(38, 0, 128); */
+    margin-top: 3rem;
+}
+
+.depart{
+    width: calc(100% / 4 - 1.5rem);
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: .5rem;
+    background: #FFFFFF;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 3px 3px 7px rgba(30, 30, 42, 0.3);
+}
+
+.depart p:nth-of-type(4){
+    /* background: red; */
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+}
+
+.liste_depart .img{
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.liste_depart img img{
+    width: 100%;
+}
+
+.purchaser{
+    margin: 1rem 1rem 0;
+}
+
+.acceptation{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    /* background: #7faca9; */
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid rgb(211, 211, 211);
+}
+
+.acceptation a{
+    width: 50%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* background: purple; */
+    text-decoration: none;
+}
+
+.approve{
+    border-right: 1px solid rgb(211, 211, 211);
+    color: #08C5BB;
+}
+
+.decline{
+    color: #ff7c01;
+}
+
+.appointPlan{
+    width: 100%;
+    display: flex;
+    height: calc(100vh - 4rem);
+    /* background: rgb(29, 185, 42); */
+    margin-top: 2rem;
+    /* box-shadow: -0 0 15px #0e0e14; */
+}
+
+.calendrier{
+    width: 70%;
+    height: 100%;
+    background: red;
+}
+
+.calendrier .calendar{
+    width: 100%;
+    height: 100%;
+    background: #1f1e1e;
+}
+
+.calendrier .weekdays{
+    height: 15%;
+    font-weight: bolder;
+    padding: 0.3rem;
+}
+
+.calendrier .days{
+    height: 85%;
+    padding: 0.3rem;
+}
+
+.programme{
+    color: #eee;
+}
+
+.programme{
+    width: 30%;
+    height: 100%;
+    background: #2e2d2c;
+    box-shadow: -10px 3px 15px rgba(14, 14, 20, 0.5);
+}
+
+.monthdepart{
+    width: 100%;
+    height: 80%;
+    /* background: pink; */
+    padding: 1rem;
+}
+
+.monthdepart h2{
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.departList li{
+    position: relative;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.departList li span{
+    opacity: .5;
+}
+
+.departList li::before{
+    content: "";
+    width: .7rem;
+    height: .7rem;
+    display: block;
+    background: #08C5BB;
+    position: absolute;
+    left: -1.25rem;
+    top: .5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(14, 14, 20, 1);
+}
+
+.departList li:nth-of-type(odd)::before{
+    background: #ff7c01;
+}
+
+.add_depart{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    /* background: red; */
+}
+
+.add_depart > *{
+    width: 50%;
+}
+
+.add_depart > div{
+    height: 90%;
+    /* background: purple; */
+    background: url(../images/un/Une-vue-de-lUniversite-de-Ngaoundere.webp);
+    position: relative;
+    box-shadow: inset -15px 0 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.add_depart > div > *{
+    position: absolute;
+    z-index: 2;
+    color: #FFFFFF;
+}
+
+.add_depart > div > div{
+    left: 3rem;
+    bottom: 5rem;
+    color: #FFFFFF;
+}
+
+.add_depart a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    right: -1.5rem;
+    top: 50%;
+    text-decoration: none;
+}
+
+.add_depart i{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background: #012FFF;
+    font-size: 2rem;
+}
+
+.add_depart h2{
+    font-size: 2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add_depart > div:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #012FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.add_depart form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: #FFFFFF;
+    border-radius: 11px;
+    box-shadow: 0 0 10px rgba(187, 187, 187, 0.5);
+}
+
+.add_depart input, .add_depart select{
+    width: 80%;
+    height: 3rem;
+    padding-left: 1rem;
+}
+
+.add_depart select option{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.add_depart input::placeholder{
+    color: #a1a1a1;
+    font-family: sans-serif;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.addingbtn{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.addingbtn input{
+    width: calc(100% / 2 - .5rem);
+    padding: 0;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.addingbtn input[type="submit"]{
+    border: transparent;
+    background: #08C5BB;
+}
+
+.addingbtn input[type="submit"]:hover{
+    border: 1px solid #08C5BB;
+    background: transparent;
+    color: #08C5BB;
+}
+
+.addingbtn input[type="reset"]{
+    border: 1px solid #ff7c01;
+    background: transparent;
+    color: #ff7c01;
+}
+
+.addingbtn input[type="reset"]:hover{
+    border: transparent;
+    background: #ff7c01;
+    color: #FFFFFF;
+}
+
+/*------------------------------------------- FOR ETUDIANTS ----------------------------------------------*/
+
+.etudiants{
+    flex-direction: column;
+}
+
+.etudiants_list{
+    width: 100%;
+    /* height: 65vh; */
+    display: flex;
+    gap: 1rem;
+    /* background: red; */
+    margin-top: 3rem;
+}
+
+.list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* background: greenyellow; */
+    gap: 1rem;
+}
+
+.list_infos div::first-letter{
+    text-transform: capitalize;
+}
+
+.list_head{
+    width: 100%;
+    display: flex;
+    background: var(--3rd);
+    padding-right: 1rem;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-radius: 10px;
+}
+
+.list_infos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* overflow-y: scroll; */
+}
+
+/* .list_infos::-webkit-scrollbar{
+    width: 1vw;
+    box-shadow: 0 0 15px rgba(37, 37, 143, 0.5);
+}
+
+.list_infos::-webkit-scrollbar-thumb{
+    background: #0addd2;
+    border-radius: 15px;
+    transition: 3s ease;
+    box-shadow: 0 0 15px rgba(12, 194, 200, 0.5);
+}
+
+.list_infos::-webkit-scrollbar-thumb:hover{
+    background: #08C5BB;
+}
+
+.list_infos::-webkit-scrollbar-track{
+    background: #012FFF;
+    border-radius: 15px;
+} */
+
+.list_info{
+    width: 100%;
+    display: flex;
+    background: #FFFFFF;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+}
+
+/* .list_info.active{
+    background: #ff7c01;
+    color: #FFFFFF;
+} */
+
+/* .list_info:not(.active):hover{
+    background: #ff7c01c0;
+} */
+
+.list_info i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--cta);
+    transition: .1s ease-in-out;
+    /* background: red; */
+}
+
+.list_info i:hover{
+    background: var(--light);
+    border-radius: 10px;
+}
+
+.list_head div, .list_info div{
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    /* background: #012FFF; */
+}
+
+.list_head div:not(:nth-last-child(1)), .list_info div:not(:nth-last-child(1)){
+    width: calc(100% / 5 + 2.5%);
+}
+
+.list_head div:nth-last-child(1), .list_info div:nth-last-child(1){
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.list_info img{
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.infos_detail{
+    width: 100%;
+    height: 163vh;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: none;
+}
+
+.infos_detail.montrer{
+    display: block;
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
+}
+
+.info_identification{
+    width: 100%;
+    height: 14rem;
+    /* background: red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+.info_id{
+    width: calc(100% - 13.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* background: yellow; */
+}
+
+.info_id div{
+    width: 11.5rem;
+    height: 3rem;
+    border-radius: 10px;
+    background: var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .5rem;
+    /* align-items: center; */
+    text-transform: capitalize;
+}
+
+.info_id span{
+    opacity: .5;
+}
+
+.info_id p{
+    margin-top: .3rem;
+}
+
+.info_identification .photo{
+    width: 13rem;
+    height: 13rem;
+    overflow: hidden;
+    background: inherit;
+    border: 1px solid var(--3rd);
+    border-radius: 10px;
+    /* margin-right: .1rem; */
+}
+
+.info_identification .photo img{
+    width: 100%;
+}
+
+.ajout_notes{
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+    /* background-color: #1f1e1e; */
+}
+
+.ajout_notes h3{
+    width: 15rem;
+    height: 3rem;
+    background: var(--cta);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    /* margin-right: auto; */
+    color: #FFFFFF;
+}
+
+.ajout_notes .entete{
+    width: 95%;
+    height: 4rem;
+    background: var(--3rd);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.ajout_notes .entete div{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: .5rem;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.code, .credit{
+    width: 10%;
+}
+
+.unite, .note{
+    width: 40%;
+}
+
+.unite, .code, .credit{
+    border-right: 1px solid var(--light);
+}
+
+.unite{
+    position: relative;
+}
+
+.formul{
+    border-radius: 10px;
+}
+
+.formul .ue{
+    border-radius: 0;
+    background: var(--4th);
+}
+
+.formul .ue:nth-child(1){
+    border-radius: 10px 10px 0 0;
+}
+
+.formul .ue:nth-last-child(1){
+    border-radius: 0 0 10px 10px;
+}
+
+
+.formul .ue:nth-last-child(1) div{
+    border-bottom: none;
+}
+
+.formul .ue div{
+    height: 100%;
+    border-bottom: 1px solid var(--light);
+}
+
+.formul .ue input{
+    width: 80%;
+    height: 3rem;
+    border-radius: 10px;
+    border: 1px solid rgb(182, 182, 182);
+    padding-left: 1rem;
+}
+
+.formul .ue input:focus{
+    outline: 1px solid var(--cta);
+}
+
+.unite input{
+    visibility: hidden;
+    position: absolute;
+}
+
+.note form{
+    position: relative;
+    width: 100%;
+}
+
+.note form .hide{
+    visibility: hidden;
+    position: absolute;
+}
+
+.note form button{
+    width: 15%;
+    height: 3rem;
+    border-radius: 10px;
+    border: 1px solid var(--light);
+    text-transform: capitalize;
+    color: #FFFFFF;
+    background: var(--cta);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+table{
+    width: 95%;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    border: 1px solid transparent;
+    border-radius: 10px 10px 0 0;
+}
+
+table *{
+    border: none;
+}
+
+tr{
+    height: 2rem;
+}
+
+tr.head{
+    background: var(--dark);
+    color: #FFFFFF;
+    border-radius: 10px 10px 0 0;
+}
+
+tr:nth-child(even):not(:nth-child(1)){
+    background: rgb(236, 236, 236);
+}
+
+tr:nth-child(odd){
+    background: rgb(214, 214, 214);
+}
+
+td{
+    text-align: center;
+}
+
+.moy{
+    width: 10rem;
+    height: 3rem;
+    background: var(--3rd);
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    color: #FFFFFF;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: .5rem;
+}
+
+.impr{
+    width: 7rem;
+    height: 3rem;
+    background: var(--3rd);
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-left: .5rem;
+    margin-right: 2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* @media print{
+    body *:not(.toprint):not(.toprint *){
+        visibility: hidden;
+    }
+
+    .toprint{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+} */

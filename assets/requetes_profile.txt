@@ -1,0 +1,27 @@
+REQUETES BASE DES DONNEES
+
+CREATE TABLE `profile_etudiant`.`etudiant` (`matricule` VARCHAR(10) NOT NULL , `nom` VARCHAR(255) NOT NULL , `prenom` VARCHAR(255) NOT NULL , `date_naissance` DATE NOT NULL , `lieu_naissance` VARCHAR(255) NOT NULL , `genre` CHAR(1) NOT NULL , `cycle` VARCHAR(255) NOT NULL , `nationalite` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `photo` VARCHAR(255) NOT NULL , `login` VARCHAR(255) NOT NULL , `pass` VARCHAR(255) NOT NULL , `id_tuteur` INT NOT NULL , `num_adr` INT NOT NULL , `id_filiere` INT NOT NULL , PRIMARY KEY (`matricule`))
+
+CREATE TABLE `profile_etudiant`.`admin` (`id_admin` VARCHAR(10) NOT NULL , `nom_complet` VARCHAR(255) NOT NULL , `login` VARCHAR(255) NOT NULL , `pass` VARCHAR(255) NOT NULL , PRIMARY KEY (`id_admin`))
+
+CREATE TABLE `profile_etudiant`.`departement` (`code_dpt` VARCHAR(10) NOT NULL , `nom_dpt` VARCHAR(255) NOT NULL , `id_admin` INT NOT NULL , PRIMARY KEY (`code_dpt`))
+
+CREATE TABLE `profile_etudiant`.`payement` (`num_recu` INT NOT NULL AUTO_INCREMENT , `tranche` VARCHAR(255) NOT NULL , `montant` INT NOT NULL , `date_paye` DATE NOT NULL , `matricule_etu` VARCHAR(10) NOT NULL , PRIMARY KEY (`num_recu`))
+
+CREATE TABLE `profile_etudiant`.`releve` (`num_releve` INT NOT NULL AUTO_INCREMENT , `moyenne` DOUBLE NOT NULL , `appreciation` VARCHAR(2) NOT NULL , `matricule_etu` VARCHAR(10) NOT NULL , `semestre` VARCHAR(30) NOT NULL , `session` VARCHAR(30) NOT NULL , PRIMARY KEY (`num_releve`))
+
+CREATE TABLE `profile_etudiant`.`addresse` (`num_adr` INT NOT NULL AUTO_INCREMENT , `ville` VARCHAR(255) NOT NULL , `quartier` VARCHAR(255) NOT NULL , `residence` VARCHAR(255) NOT NULL , PRIMARY KEY (`num_adr`))
+
+CREATE TABLE `profile_etudiant`.`filiere` (`id_filiere` INT NOT NULL AUTO_INCREMENT , `nom_filiere` VARCHAR(255) NOT NULL , PRIMARY KEY (`id_filiere`))
+
+CREATE TABLE `profile_etudiant`.`unite` (`code_ue` VARCHAR(20) NOT NULL , `libelle` VARCHAR(255) NOT NULL , `nbr_credit` INT NOT NULL , `nature` VARCHAR(255) NOT NULL , PRIMARY KEY (`code_ue`))
+
+CREATE TABLE `profile_etudiant`.`tuteur` (`id` INT NOT NULL AUTO_INCREMENT , `nom_complet` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `tel` VARCHAR(10) NOT NULL , `login` VARCHAR(255) NOT NULL , `pass` INT NOT NULL , PRIMARY KEY (`id`))
+
+ALTER TABLE `etudiant` ADD `niveau` INT NOT NULL AFTER `cycle`;
+
+ALTER TABLE `etudiant` ADD `ville` VARCHAR(50) NOT NULL AFTER `id_filiere`, ADD `quartier` VARCHAR(50) NOT NULL AFTER `ville`, ADD `residence` VARCHAR(50) NOT NULL AFTER `quartier`;
+
+ALTER TABLE `etudiant` ADD `tel` INT NOT NULL AFTER `residence`, ADD `faxe` INT NOT NULL AFTER `tel`;
+
+UPDATE `etudiant` SET `id_tuteur` = '1' WHERE `etudiant`.`matricule` = '22J667FS'

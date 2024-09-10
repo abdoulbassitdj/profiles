@@ -1,0 +1,106 @@
+@import url(../assets/css/variables.css);
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light);
+}
+
+.connect{
+    height: 80vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3), -5px 0 5px rgba(24, 19, 73, 0.2);
+}
+
+form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+}
+
+.group_submit{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.group_submit > *{
+    font-size: large;
+    letter-spacing: 1.5px;
+}
+
+.group_submit a{
+    color: var(--3rd);
+}
+
+.connect input:not([type="submit"]){
+    width: 80%;
+    height: 3rem;
+    margin: 1rem 0;
+    padding: .5rem;
+    background: transparent;
+    /* border: transparent; */
+    border: 1px solid #000000;
+    font-size: 1.3rem;
+}
+
+.connect input:not([type="submit"]):focus{
+    border: none;
+    outline: 1px solid var(--3rd);
+}
+
+.link_forgot{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    /* background: red; */
+}
+
+.connect a{
+    text-decoration: none;
+}
+
+.link_forgot a{
+    color: #a1a1a1;
+}
+
+input::placeholder{
+    color: #a1a1a1;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.group_submit input,.connect button{
+    width: 30%;
+    height: 3rem;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    background: var(--3rd);
+    color: #000000;
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    color: #FFFFFF;
+}
+
+.connect button{
+    margin-left: 1rem;
+    border: 1px solid var(--3rd);
+    background: transparent;
+}
+
+.connect h2{
+    width: 80%;
+    color: #000000;
+    margin-bottom: 2rem;
+    /* box-shadow: inset 0 0 15px rgba(0, 0, 0, .5), inset -35px 0 30px rgba(24, 19, 73, 0.3); */
+}
